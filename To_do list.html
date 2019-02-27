@@ -38,8 +38,16 @@
 			div.appendChild(label);
 			var set_input_st=document.querySelector(".input_t");
 			set_input_st.style.marginLeft='20px';
-			document.getElementById("btn_id").addEventListener("click", create_table);
+			document.getElementById("btn_id").addEventListener("click", check);
 		}
+			function check(){
+				if(document.getElementById("date1").value!="" && document.getElementById("desc1").value!=""){
+					create_table();
+				}
+				else{
+					alert("Enter Data");
+				}
+			}
 		arr=[];
 		var div_table=document.getElementById("div_table");
 		div_table.style.marginTop="40px";
